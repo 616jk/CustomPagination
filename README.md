@@ -6,3 +6,12 @@ Example, 10k rows of data in the database table and it will pull 10k rows of dat
 This is why the custom pagination come in and help resolve the performance issue. 
 
 Example, 10k rows of data in the database table and it will only pull 20 rows of data (we defined how many we want) and bind into the GridView.
+
+#### Steps:
+1. Create database - MOCK_DB
+2. Import dummy data - MOCK_DATA.sql
+3. Download and run the project "CustomPagination"
+
+#### Screenshot:
+
+![GridView - Custom Pagination](https://raw.githubusercontent.com/joannakoay616/CustomPagination/main/screenshot.png)
