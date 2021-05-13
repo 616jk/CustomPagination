@@ -15,7 +15,10 @@ ___
 #### Steps:
 1. Create database - MOCK_DB
 2. Import dummy data - MOCK_DATA.sql
-3. Download and run the project "CustomPagination"
+3. Run the project "CustomPagination"
+
+#### Youtube:
+https://youtu.be/wTdDqBcONco
 
 #### Screenshot:
 
