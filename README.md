@@ -17,9 +17,8 @@ ___
 2. Import dummy data - MOCK_DATA.sql
 3. Run the project "CustomPagination"
 
-#### Youtube:
-<a href="https://youtu.be/wTdDqBcONco" target="_blank">https://youtu.be/wTdDqBcONco</a>
-
+#### Youtube: 
+https://youtu.be/wTdDqBcONco
 
 #### Screenshot:
 
