@@ -6,7 +6,7 @@ Example, 100k rows of data in the database table and it will pull 100k rows of d
 
 This is why the custom pagination come in and help resolve the performance issue. 
 
-Example, 10k rows of data in the database table and it will only pull 20 rows of data (we defined how many we want) and bind into the GridView.
+Example, 100k rows of data in the database table and it will only pull 20 rows of data (we defined how many we want) and bind into the GridView.
 
 #### *Note: this is just a sample project as a reference*
 
