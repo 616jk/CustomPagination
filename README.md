@@ -18,7 +18,8 @@ ___
 3. Run the project "CustomPagination"
 
 #### Youtube:
-https://youtu.be/wTdDqBcONco
+<a href="https://youtu.be/wTdDqBcONco" target="_blank">https://youtu.be/wTdDqBcONco</a>
+
 
 #### Screenshot:
 
