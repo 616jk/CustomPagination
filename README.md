@@ -12,6 +12,10 @@ Example, 10k rows of data in the database table and it will only pull 20 rows of
 
 ___
 
+#### Tools:
+- Microsoft SQL Server Management Studio
+- Visual Studio 2019
+
 #### Steps:
 1. Create database - MOCK_DB
 2. Import dummy data - MOCK_DATA.sql
