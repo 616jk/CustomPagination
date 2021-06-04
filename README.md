@@ -29,4 +29,4 @@ https://youtu.be/TX8KAiRL7jU
 
 #### Screenshot:
 
-![GridView - Custom Pagination](https://raw.githubusercontent.com/joannakoay616/CustomPagination/main/screenshot.png)
+![GridView - Custom Pagination](https://raw.githubusercontent.com/616jk/CustomPagination/main/screenshot.png)
