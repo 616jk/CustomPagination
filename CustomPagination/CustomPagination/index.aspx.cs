@@ -40,6 +40,19 @@ namespace CustomPagination
             ddlCustomPagination_SelectedIndexChanged(sender, e);
         }
 
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadDropDownList();
+            LoadGridView(true);
+        }
+
+        protected void btnViewAll_Click(object sender, EventArgs e)
+        {
+            ClearSearchInput();
+            LoadDropDownList();
+            LoadGridView(true);
+        }
+
         private void LoadDropDownList()
         {
             DataTable dtTotalRecords = ExecuteSqlCommand(MockDBConnectionString, CountMockData());
@@ -87,14 +100,53 @@ namespace CustomPagination
             return output;
         }
 
+        private void ClearSearchInput()
+        {
+            txtFirstName.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+        }
+
+        private SearchInput GetSearchInput()
+        {
+            return new SearchInput()
+            {
+                FirstName = txtFirstName.Text,
+                LastName = txtLastName.Text,
+                Email = txtEmail.Text
+            };
+        }
+
+        private string WhereClause()
+        {
+            SearchInput searchInput = GetSearchInput();
+
+            string whereClause = "WHERE 1=1 ";
+
+            if (!string.IsNullOrEmpty(searchInput.FirstName))
+                whereClause += string.Format("AND first_name LIKE '%{0}%' ", searchInput.FirstName);
+
+            if (!string.IsNullOrEmpty(searchInput.LastName))
+                whereClause += string.Format("AND last_name LIKE '%{0}%' ", searchInput.LastName);
+
+            if (!string.IsNullOrEmpty(searchInput.Email))
+                whereClause += string.Format("AND email LIKE '%{0}%' ", searchInput.Email);
+
+            return whereClause;
+        }
+
         private string CountMockData()
         {
-            return "SELECT COUNT(id) FROM MOCK_DATA";
+            return string.Format("SELECT COUNT(id) FROM MOCK_DATA {0}", 
+                WhereClause());
         }
 
         private string GetMockData(int offset = 0)
         {
-            return string.Format("SELECT * FROM MOCK_DATA ORDER BY id OFFSET {0} ROWS FETCH NEXT {1} ROWS ONLY", offset, NumberOfRecords);
+            return string.Format("SELECT * FROM MOCK_DATA {0} ORDER BY id OFFSET {1} ROWS FETCH NEXT {2} ROWS ONLY", 
+                WhereClause(), 
+                offset, 
+                NumberOfRecords);
         }
 
         private DataTable ExecuteSqlCommand(string connectionString, string queryString)
@@ -107,6 +159,13 @@ namespace CustomPagination
                 adapter.Fill(datatable);
                 return datatable;
             }
+        }
+
+        class SearchInput
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Email { get; set; }
         }
     }
 }
