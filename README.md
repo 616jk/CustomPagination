@@ -22,9 +22,9 @@ ___
 3. Open the project "CustomPagination" with Visual Studio 2019 and run it
 
 #### Youtube: 
-1. visual studio 2019 c# GridView - Custom Pagination (01)
+- Part 1: visual studio 2019 c# GridView - Custom Pagination
 https://youtu.be/wTdDqBcONco
-2. visual studio 2019 c# GridView - Search (02)
+- Part 2: visual studio 2019 c# GridView - Search
 https://youtu.be/TX8KAiRL7jU
 
 #### Screenshot:
